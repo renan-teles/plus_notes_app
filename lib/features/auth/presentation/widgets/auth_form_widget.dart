@@ -142,14 +142,16 @@ class _AuthFormWidgetState extends State<AuthFormWidget> {
             SizedBox(
               width: double.infinity,
               height: 50,
-              child: loadingIs
-                  ? const CircularProgressIndicator()
-                  : ElevatedButton(
-                      onPressed: () async {
+              child: ElevatedButton(
+                onPressed: loadingIs
+                    ? null
+                    : () async {
                         await _submit(context);
                       },
-                      child: Text(isRegisterRole ? 'Registrar-se' : 'Entrar'),
-                    ),
+                child: loadingIs
+                    ? const CircularProgressIndicator()
+                    : Text(isRegisterRole ? 'Registrar-se' : 'Entrar'),
+              ),
             ),
 
             const SizedBox(height: 16),
