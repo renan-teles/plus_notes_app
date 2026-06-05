@@ -80,7 +80,7 @@ class _NotePageState extends State<NotePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(isUpdateRole ? 'Editar anotação' : 'Criar Anotação'),
+        title: Text(isUpdateRole ? 'Editar Anotação' : 'Criar Anotação'),
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: loadingIs

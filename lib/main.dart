@@ -9,7 +9,7 @@ import 'package:plus_notes_app/shared/ui/widget/global_message.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
-  _init();
+  await _init();
   runApp(const MyApp());
 }
 
